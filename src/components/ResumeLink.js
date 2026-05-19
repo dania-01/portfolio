@@ -3,11 +3,11 @@ import { FaFileDownload } from 'react-icons/fa';
 
 export default function ResumeLink({ variant = 'default' }) {
   const handleResumeClick = () => {
-    window.open(
-      'https://drive.google.com/uc?export=download&id=1DoKKIacR8RQV240eaqqAodLToZUyWhZk',
-      '_blank',
-      'noopener,noreferrer'
-    );
+    window.open('https://drive.google.com/file/d/1DoKKIacR8RQV240eaqqAodLToZUyWhZk/view', '_blank', 'noopener,noreferrer');
+    const a = document.createElement('a');
+    a.href = 'https://drive.google.com/uc?export=download&id=1DoKKIacR8RQV240eaqqAodLToZUyWhZk';
+    a.download = 'Dania_Khan_Resume.pdf';
+    a.click();
   };
 
   const baseStyle = {

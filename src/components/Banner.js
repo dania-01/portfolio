@@ -111,7 +111,7 @@ export default function Banner() {
             <div className="avatar-ring-wrap">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/assets/img/profile.png"
+                src="/assets/img/profile-picture.png"
                 alt="Dania Khan"
                 className="profile-img"
               />

@@ -32,7 +32,7 @@ const MARQUEE_TECH = [
   { name: 'Vite',         icon: <SiVite        size={15} color="#646CFF" /> },
 ];
 
-/* ── Skill categories (no backend) ── */
+/* ── Skill categories (technical only) ── */
 const CATEGORIES = [
   {
     num: '01', title: 'Frontend Frameworks & Libraries', color: '#61DAFB',
@@ -49,11 +49,13 @@ const CATEGORIES = [
     gradient: 'rgba(244,114,182,0.06)',
     tags: ['Git', 'GitHub', 'VS Code', 'Postman', 'Netlify', 'Vite', 'npm', 'Firebase'],
   },
-  {
-    num: '04', title: 'Soft Skills', color: '#03DAC6',
-    gradient: 'rgba(3,218,198,0.06)',
-    tags: ['Problem-solving', 'Cross-functional Collaboration', 'Time Management', 'Communication'],
-  },
+];
+
+const SOFT_SKILLS = [
+  { label: 'Problem-solving',                icon: '🧩' },
+  { label: 'Cross-functional Collaboration', icon: '🤝' },
+  { label: 'Time Management',                icon: '⏱️' },
+  { label: 'Communication',                  icon: '💬' },
 ];
 
 /* duplicate for seamless infinite marquee */
@@ -65,7 +67,7 @@ export default function Skills() {
 
       {/* ── Section header ── */}
       <Container>
-        <h2 className="section-title">Tech Stack</h2>
+        <h2 className="section-title">Skills</h2>
         <p className="section-subtitle">Technologies I work with every day</p>
       </Container>
 
@@ -85,23 +87,20 @@ export default function Skills() {
         </div>
       </div>
 
-      {/* ── Category cards ── */}
+      {/* ── Technical skill cards ── */}
       <Container>
         <Row className="g-4">
           {CATEGORIES.map(({ num, title, color, gradient, tags }) => (
-            <Col key={num} xs={6} lg={3}>
+            <Col key={num} xs={6} lg={4}>
               <div
                 className="skill-cat-card"
                 style={{ background: `linear-gradient(135deg, #161b22 0%, ${gradient} 100%)` }}
               >
-                {/* Card header */}
                 <div className="skill-cat-header">
                   <span className="skill-cat-num" style={{ color }}>{num}</span>
                   <div className="skill-cat-divider" style={{ background: color }} />
                   <span className="skill-cat-title-text">{title}</span>
                 </div>
-
-                {/* Tag cloud */}
                 <div className="skill-tags-wrap">
                   {tags.map(tag => (
                     <span key={tag} className="skill-tag" data-color={color}>
@@ -113,6 +112,18 @@ export default function Skills() {
             </Col>
           ))}
         </Row>
+
+        {/* ── Soft Skills ── */}
+        <div className="soft-skills-wrap">
+          <p className="soft-skills-label">Soft Skills</p>
+          <div className="soft-skills-pills">
+            {SOFT_SKILLS.map(({ label, icon }) => (
+              <span key={label} className="soft-skill-pill">
+                {icon} {label}
+              </span>
+            ))}
+          </div>
+        </div>
       </Container>
     </section>
   );

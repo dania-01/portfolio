@@ -87,8 +87,9 @@ export default function Skills() {
         </div>
       </div>
 
-      {/* ── Technical skill cards ── */}
+      {/* ── Technical skills ── */}
       <Container>
+        <p className="skills-group-label">Technical Skills</p>
         <Row className="g-4">
           {CATEGORIES.map(({ num, title, color, gradient, tags }) => (
             <Col key={num} xs={6} lg={4}>
@@ -114,15 +115,13 @@ export default function Skills() {
         </Row>
 
         {/* ── Soft Skills ── */}
-        <div className="soft-skills-wrap">
-          <p className="soft-skills-label">Soft Skills</p>
-          <div className="soft-skills-pills">
-            {SOFT_SKILLS.map(({ label, icon }) => (
-              <span key={label} className="soft-skill-pill">
-                {icon} {label}
-              </span>
-            ))}
-          </div>
+        <p className="skills-group-label" style={{ marginTop: '40px' }}>Soft Skills</p>
+        <div className="soft-skills-pills">
+          {SOFT_SKILLS.map(({ label, icon }) => (
+            <span key={label} className="soft-skill-pill">
+              {icon} {label}
+            </span>
+          ))}
         </div>
       </Container>
     </section>

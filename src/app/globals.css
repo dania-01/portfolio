@@ -696,34 +696,27 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before { 
 .exp-project.open .exp-project-name { color: var(--accent); }
 .exp-project .exp-body { padding: 0 24px 20px; }
 
-/* ── Soft Skills row ── */
-.soft-skills-wrap {
-  margin-top: 40px;
-  padding: 28px 32px;
-  border-radius: 16px;
-  border: 1px solid var(--border-dim);
-  background: linear-gradient(135deg, #161b22 0%, rgba(3,218,198,0.04) 100%);
-  display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
-}
-.soft-skills-label {
+/* ── Skills group label ── */
+.skills-group-label {
   font-size: 0.72rem; font-weight: 700;
-  color: var(--accent); letter-spacing: 1px;
-  text-transform: uppercase; margin: 0;
-  white-space: nowrap;
+  color: var(--accent); letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0 0 20px;
 }
+
+/* ── Soft Skills pills ── */
 .soft-skills-pills {
   display: flex; flex-wrap: wrap; gap: 10px;
 }
 .soft-skill-pill {
   display: inline-flex; align-items: center; gap: 6px;
-  padding: 7px 16px; border-radius: 999px;
-  font-size: 0.82rem; font-weight: 500;
+  padding: 8px 18px; border-radius: 999px;
+  font-size: 0.83rem; font-weight: 500;
   color: var(--text-muted);
   background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(3,218,198,0.2);
-  transition: border-color 0.2s, color 0.2s;
+  border: 1px solid var(--border-dim);
+  cursor: default;
 }
-.soft-skill-pill:hover { border-color: var(--accent); color: var(--text); }
 
 /* ── Map in Contact ── */
 .contact-map-wrap {

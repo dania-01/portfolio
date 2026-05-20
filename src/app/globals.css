@@ -490,6 +490,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before { 
    ════════════════════════════════════════ */
 .about-section {
   padding: 90px 0;
+  background: var(--bg);
   border-top: 1px solid var(--border-dim);
 }
 .about-text {
@@ -551,6 +552,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before { 
    ════════════════════════════════════════ */
 .experience-section {
   padding: 90px 0;
+  background: var(--bg);
   border-top: 1px solid var(--border-dim);
 }
 .exp-timeline {

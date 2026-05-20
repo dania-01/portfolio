@@ -3,7 +3,6 @@ import { useState, useRef } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import emailjs from 'emailjs-com';
 import { FaEnvelope, FaLinkedin, FaGithub, FaPaperPlane } from 'react-icons/fa';
-import { MapPin, Clock, Wifi } from 'lucide-react';
 
 const INFO = [
   {
@@ -86,29 +85,6 @@ export default function Contact() {
                 </div>
               </a>
             ))}
-            <div className="contact-location-card">
-              <div className="contact-location-row">
-                <MapPin size={15} color="#03DAC6" />
-                <div>
-                  <div className="contact-location-label">Location</div>
-                  <div className="contact-location-value">Karachi, Pakistan</div>
-                </div>
-              </div>
-              <div className="contact-location-row">
-                <Clock size={15} color="#03DAC6" />
-                <div>
-                  <div className="contact-location-label">Timezone</div>
-                  <div className="contact-location-value">PKT — UTC +5:00</div>
-                </div>
-              </div>
-              <div className="contact-location-row">
-                <Wifi size={15} color="#03DAC6" />
-                <div>
-                  <div className="contact-location-label">Availability</div>
-                  <div className="contact-location-value">Open to Remote &amp; On-site</div>
-                </div>
-              </div>
-            </div>
           </Col>
 
           {/* ── Form ── */}

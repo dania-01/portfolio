@@ -50,7 +50,7 @@ export default function Experience() {
                   <h4 className="exp-title">Frontend Developer</h4>
                   <span className="exp-company-name">TalkWisely Platforms Pvt. Ltd.</span>
                 </div>
-                <span className="exp-period">2024 — Present</span>
+                <span className="exp-period">2025 — Present</span>
               </div>
 
               {/* Projects */}

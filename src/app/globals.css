@@ -708,6 +708,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before { 
 .soft-skills-pills {
   display: flex; flex-wrap: wrap; gap: 10px;
 }
+@media (max-width: 767px) {
+  .soft-skill-pill { width: 100%; justify-content: flex-start; }
+}
 .soft-skill-pill {
   display: inline-flex; align-items: center; gap: 6px;
   padding: 8px 18px; border-radius: 999px;

@@ -1,5 +1,6 @@
 'use client';
 import { Container, Row, Col } from 'react-bootstrap';
+import { Lightbulb, Users, Clock, MessageSquare } from 'lucide-react';
 import {
   FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaGithub,
 } from 'react-icons/fa';
@@ -52,10 +53,10 @@ const CATEGORIES = [
 ];
 
 const SOFT_SKILLS = [
-  { label: 'Problem-solving',                icon: '🧩' },
-  { label: 'Cross-functional Collaboration', icon: '🤝' },
-  { label: 'Time Management',                icon: '⏱️' },
-  { label: 'Communication',                  icon: '💬' },
+  { label: 'Problem-solving',                icon: <Lightbulb size={14} /> },
+  { label: 'Cross-functional Collaboration', icon: <Users      size={14} /> },
+  { label: 'Time Management',                icon: <Clock      size={14} /> },
+  { label: 'Communication',                  icon: <MessageSquare size={14} /> },
 ];
 
 /* duplicate for seamless infinite marquee */

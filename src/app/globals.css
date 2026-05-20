@@ -659,6 +659,43 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before { 
   padding: 4px 10px; border-radius: 20px;
 }
 
+/* ── Company card (single employer, multiple projects) ── */
+.exp-company-card {
+  border-radius: 16px;
+  border: 1px solid var(--border-dim);
+  overflow: hidden;
+}
+.exp-company-header {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; gap: 16px;
+  padding: 22px 24px;
+  border-bottom: 1px solid var(--border-dim);
+}
+.exp-company-name {
+  display: block;
+  font-size: 0.88rem; font-weight: 600;
+  color: var(--accent); margin-top: 4px;
+}
+.exp-projects { padding: 0; }
+.exp-project {
+  border-bottom: 1px solid var(--border-dim);
+}
+.exp-project:last-child { border-bottom: none; }
+.exp-project-header {
+  display: flex; align-items: center;
+  justify-content: space-between; gap: 16px;
+  padding: 16px 24px;
+  cursor: pointer; user-select: none;
+  transition: background 0.2s;
+}
+.exp-project-header:hover { background: rgba(255,255,255,0.02); }
+.exp-project-name {
+  font-size: 0.92rem; font-weight: 700;
+  color: var(--text);
+}
+.exp-project.open .exp-project-name { color: var(--accent); }
+.exp-project .exp-body { padding: 0 24px 20px; }
+
 /* ── Map in Contact ── */
 .contact-map-wrap {
   margin-top: 16px;

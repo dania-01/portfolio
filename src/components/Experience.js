@@ -3,11 +3,9 @@ import { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { FaBriefcase, FaChevronDown, FaChevronUp, FaExternalLinkAlt } from 'react-icons/fa';
 
-const EXPERIENCES = [
+const PROJECTS = [
   {
-    title: 'Frontend Developer',
-    company: 'Jam Energy',
-    period: 'Present',
+    name: 'Jam Energy',
     desc: 'AI-Powered Energy Bill Validation Platform',
     website: 'https://jamenergy.uk',
     app: 'https://app.jamenergy.uk',
@@ -19,9 +17,7 @@ const EXPERIENCES = [
     tags: ['React.js', 'Next.js', 'TanStack Query', 'React Hook Form', 'Zod', 'REST APIs'],
   },
   {
-    title: 'Frontend Developer',
-    company: 'Pulse — TalkWisely',
-    period: '2024',
+    name: 'Pulse',
     desc: 'Customer Support and Calling Application',
     website: 'https://talkwisely.io',
     app: 'https://phone.talkwisely.io',
@@ -44,57 +40,64 @@ export default function Experience() {
         <p className="section-subtitle">Where I&apos;ve shipped real products</p>
 
         <div className="exp-timeline">
-          {EXPERIENCES.map((exp, i) => (
-            <div key={i} className="exp-item">
-              <div className="exp-dot">
-                <FaBriefcase size={13} />
-              </div>
-              <div className={`exp-card glass${openIdx === i ? ' open' : ''}`}>
-                <div
-                  className="exp-header"
-                  onClick={() => setOpenIdx(openIdx === i ? -1 : i)}
-                  role="button"
-                  tabIndex={0}
-                  onKeyDown={(e) => e.key === 'Enter' && setOpenIdx(openIdx === i ? -1 : i)}
-                >
-                  <div className="exp-header-left">
-                    <h4 className="exp-title">{exp.title}</h4>
-                    <div className="exp-meta-row">
-                      <span className="exp-company">{exp.company}</span>
-                      <span className="exp-desc-tag">{exp.desc}</span>
-                    </div>
-                  </div>
-                  <div className="exp-header-right">
-                    <span className="exp-period">{exp.period}</span>
-                    {openIdx === i
-                      ? <FaChevronUp size={12} color="#6b7280" />
-                      : <FaChevronDown size={12} color="#6b7280" />}
-                  </div>
-                </div>
+          <div className="exp-item">
+            <div className="exp-dot"><FaBriefcase size={13} /></div>
 
-                {openIdx === i && (
-                  <div className="exp-body">
-                    <div className="exp-links">
-                      <a href={exp.website} target="_blank" rel="noopener noreferrer">
-                        <FaExternalLinkAlt size={10} /> Website
-                      </a>
-                      <a href={exp.app} target="_blank" rel="noopener noreferrer">
-                        <FaExternalLinkAlt size={10} /> App
-                      </a>
+            {/* Company card */}
+            <div className="exp-company-card glass">
+              <div className="exp-company-header">
+                <div>
+                  <h4 className="exp-title">Frontend Developer</h4>
+                  <span className="exp-company-name">TalkWisely Platforms Pvt. Ltd.</span>
+                </div>
+                <span className="exp-period">2024 — Present</span>
+              </div>
+
+              {/* Projects */}
+              <div className="exp-projects">
+                {PROJECTS.map((proj, i) => (
+                  <div key={i} className={`exp-project${openIdx === i ? ' open' : ''}`}>
+                    <div
+                      className="exp-project-header"
+                      onClick={() => setOpenIdx(openIdx === i ? -1 : i)}
+                      role="button"
+                      tabIndex={0}
+                      onKeyDown={(e) => e.key === 'Enter' && setOpenIdx(openIdx === i ? -1 : i)}
+                    >
+                      <div>
+                        <span className="exp-project-name">{proj.name}</span>
+                        <span className="exp-desc-tag"> — {proj.desc}</span>
+                      </div>
+                      {openIdx === i
+                        ? <FaChevronUp size={11} color="#6b7280" />
+                        : <FaChevronDown size={11} color="#6b7280" />}
                     </div>
-                    <ul className="exp-points">
-                      {exp.points.map((p, j) => <li key={j}>{p}</li>)}
-                    </ul>
-                    <div className="exp-tags">
-                      {exp.tags.map(tag => (
-                        <span key={tag} className="exp-tag">{tag}</span>
-                      ))}
-                    </div>
+
+                    {openIdx === i && (
+                      <div className="exp-body">
+                        <div className="exp-links">
+                          <a href={proj.website} target="_blank" rel="noopener noreferrer">
+                            <FaExternalLinkAlt size={10} /> Website
+                          </a>
+                          <a href={proj.app} target="_blank" rel="noopener noreferrer">
+                            <FaExternalLinkAlt size={10} /> App
+                          </a>
+                        </div>
+                        <ul className="exp-points">
+                          {proj.points.map((p, j) => <li key={j}>{p}</li>)}
+                        </ul>
+                        <div className="exp-tags">
+                          {proj.tags.map(tag => (
+                            <span key={tag} className="exp-tag">{tag}</span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
-                )}
+                ))}
               </div>
             </div>
-          ))}
+          </div>
         </div>
       </Container>
     </section>

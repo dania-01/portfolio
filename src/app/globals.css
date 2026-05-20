@@ -718,16 +718,29 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before { 
   cursor: default;
 }
 
-/* ── Map in Contact ── */
-.contact-map-wrap {
+/* ── Location card in Contact ── */
+.contact-location-card {
   margin-top: 16px;
-  border-radius: 12px;
-  overflow: hidden;
+  border-radius: 14px;
   border: 1px solid var(--border-dim);
-  filter: grayscale(0.6) brightness(0.75);
-  transition: filter 0.3s;
+  background: var(--bg-card);
+  padding: 6px 0;
+  overflow: hidden;
 }
-.contact-map-wrap:hover { filter: grayscale(0) brightness(0.85); }
+.contact-location-row {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border-dim);
+}
+.contact-location-row:last-child { border-bottom: none; }
+.contact-location-label {
+  font-size: 0.68rem; color: var(--text-subtle);
+  text-transform: uppercase; letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+.contact-location-value {
+  font-size: 0.85rem; font-weight: 500; color: var(--text);
+}
 
 /* ── Legacy compat ── */
 p.success { color: #3fb950; }

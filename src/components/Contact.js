@@ -3,6 +3,7 @@ import { useState, useRef } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import emailjs from 'emailjs-com';
 import { FaEnvelope, FaLinkedin, FaGithub, FaPaperPlane } from 'react-icons/fa';
+import { MapPin, Clock, Wifi } from 'lucide-react';
 
 const INFO = [
   {
@@ -85,17 +86,28 @@ export default function Contact() {
                 </div>
               </a>
             ))}
-            <div className="contact-map-wrap">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d231175.45913994!2d66.99006!3d24.9056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e06651d4bbf%3A0x9cf92f44555a0c23!2sKarachi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1716000000000"
-                width="100%"
-                height="200"
-                style={{ border: 0, borderRadius: '12px', display: 'block' }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Location"
-              />
+            <div className="contact-location-card">
+              <div className="contact-location-row">
+                <MapPin size={15} color="#03DAC6" />
+                <div>
+                  <div className="contact-location-label">Location</div>
+                  <div className="contact-location-value">Karachi, Pakistan</div>
+                </div>
+              </div>
+              <div className="contact-location-row">
+                <Clock size={15} color="#03DAC6" />
+                <div>
+                  <div className="contact-location-label">Timezone</div>
+                  <div className="contact-location-value">PKT — UTC +5:00</div>
+                </div>
+              </div>
+              <div className="contact-location-row">
+                <Wifi size={15} color="#03DAC6" />
+                <div>
+                  <div className="contact-location-label">Availability</div>
+                  <div className="contact-location-value">Open to Remote &amp; On-site</div>
+                </div>
+              </div>
             </div>
           </Col>
 

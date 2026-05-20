@@ -1,5 +1,7 @@
 import NavBar from '@/components/NavBar';
 import Banner from '@/components/Banner';
+import About from '@/components/About';
+import Experience from '@/components/Experience';
 import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import GithubStats from '@/components/GithubStats';
@@ -13,6 +15,8 @@ export default function Home() {
       <Background />
       <NavBar />
       <Banner />
+      <About />
+      <Experience />
       <Skills />
       <Projects />
       <GithubStats />

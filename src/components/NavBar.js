@@ -5,10 +5,12 @@ import { FaTimes, FaBars } from 'react-icons/fa';
 import ResumeLink from './ResumeLink';
 
 const NAV_SECTIONS = [
-  { id: 'home',     key: 'home',     label: 'About Me', href: '#home' },
-  { id: 'skills',   key: 'skills',   label: 'Skills',   href: '#skills' },
-  { id: 'projects', key: 'projects', label: 'Projects', href: '#projects' },
-  { id: 'connect',  key: 'contact',  label: 'Contact',  href: '#connect' },
+  { id: 'home',       key: 'home',       label: 'Home',       href: '#home' },
+  { id: 'about',      key: 'about',      label: 'About',      href: '#about' },
+  { id: 'experience', key: 'experience', label: 'Experience', href: '#experience' },
+  { id: 'skills',     key: 'skills',     label: 'Skills',     href: '#skills' },
+  { id: 'projects',   key: 'projects',   label: 'Projects',   href: '#projects' },
+  { id: 'connect',    key: 'contact',    label: 'Contact',    href: '#connect' },
 ];
 
 export default function NavBar() {

@@ -1,12 +1,12 @@
 'use client';
 import { Container, Row, Col } from 'react-bootstrap';
 import {
-  FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaGithub, FaTools,
+  FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaGithub,
 } from 'react-icons/fa';
 import {
   SiRedux, SiTailwindcss, SiFirebase,
-  SiNextdotjs, SiPostman, SiBootstrap, SiTypescript,
-  SiMui, SiJquery, SiVite,
+  SiNextdotjs, SiPostman, SiBootstrap,
+  SiMui, SiVite,
 } from 'react-icons/si';
 import { VscCode } from 'react-icons/vsc';
 
@@ -48,6 +48,11 @@ const CATEGORIES = [
     num: '03', title: 'Tools & Workflow', color: '#f472b6',
     gradient: 'rgba(244,114,182,0.06)',
     tags: ['Git', 'GitHub', 'VS Code', 'Postman', 'Netlify', 'Vite', 'npm', 'Firebase'],
+  },
+  {
+    num: '04', title: 'Soft Skills', color: '#03DAC6',
+    gradient: 'rgba(3,218,198,0.06)',
+    tags: ['Problem-solving', 'Cross-functional Collaboration', 'Time Management', 'Communication'],
   },
 ];
 

@@ -93,7 +93,7 @@ export default function Skills() {
         <p className="skills-group-label">Technical Skills</p>
         <Row className="g-4">
           {CATEGORIES.map(({ num, title, color, gradient, tags }) => (
-            <Col key={num} xs={6} lg={4}>
+            <Col key={num} xs={12} lg={4}>
               <div
                 className="skill-cat-card"
                 style={{ background: `linear-gradient(135deg, #161b22 0%, ${gradient} 100%)` }}

@@ -2,9 +2,26 @@
 import { Col, Container, Row, Nav, Tab } from 'react-bootstrap';
 import ProjectCard from './ProjectCard';
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact } from 'react-icons/fa';
-import { SiRedux, SiTailwindcss, SiMongodb, SiExpress, SiFirebase, SiCloudinary, SiBootstrap } from 'react-icons/si';
+import { SiRedux, SiTailwindcss, SiMongodb, SiExpress, SiFirebase, SiCloudinary, SiBootstrap, SiNextdotjs, SiShadcnui } from 'react-icons/si';
 
 const frontendProjects = [
+  {
+    title: 'Swiggy Clone',
+    description: [
+      'Pixel-perfect Swiggy UI clone with restaurant listings and menu browsing.',
+      'Built with Next.js 16 and shadcn/ui components for a polished, accessible UI.',
+      'Responsive design styled with Tailwind CSS v4 and Lucide React icons.',
+    ],
+    image: '/assets/img/swiggy.png',
+    liveLink: 'https://swiiggyyy.netlify.app/',
+    githubLink: 'https://github.com/dania-01/swiggy',
+    techStack: [
+      { logo: <SiNextdotjs size={28} color="#FFFFFF" /> },
+      { logo: <FaReact size={28} color="#61DAFB" /> },
+      { logo: <SiTailwindcss size={28} color="#38BDF8" /> },
+      { logo: <SiShadcnui size={28} color="#FFFFFF" /> },
+    ],
+  },
   {
     title: 'Loanify – Loan Application',
     description: [
@@ -87,9 +104,9 @@ export default function Projects() {
                 <Nav.Item><Nav.Link eventKey="fullstack">Fullstack</Nav.Link></Nav.Item>
               </Nav>
               <Tab.Content>
-                <Tab.Pane eventKey="all"><Row className="g-4">{allProjects.map((p, i) => <ProjectCard key={i} {...p} />)}</Row></Tab.Pane>
-                <Tab.Pane eventKey="frontend"><Row className="g-4">{frontendProjects.map((p, i) => <ProjectCard key={i} {...p} />)}</Row></Tab.Pane>
-                <Tab.Pane eventKey="fullstack"><Row className="g-4">{fullstackProjects.map((p, i) => <ProjectCard key={i} {...p} />)}</Row></Tab.Pane>
+                <Tab.Pane eventKey="all"><Row className="g-4 justify-content-center">{allProjects.map((p, i) => <ProjectCard key={i} {...p} />)}</Row></Tab.Pane>
+                <Tab.Pane eventKey="frontend"><Row className="g-4 justify-content-center">{frontendProjects.map((p, i) => <ProjectCard key={i} {...p} />)}</Row></Tab.Pane>
+                <Tab.Pane eventKey="fullstack"><Row className="g-4 justify-content-center">{fullstackProjects.map((p, i) => <ProjectCard key={i} {...p} />)}</Row></Tab.Pane>
               </Tab.Content>
             </Tab.Container>
           </Col>

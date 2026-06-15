@@ -2,9 +2,27 @@
 import { Col, Container, Row, Nav, Tab } from 'react-bootstrap';
 import ProjectCard from './ProjectCard';
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact } from 'react-icons/fa';
-import { SiRedux, SiTailwindcss, SiMongodb, SiExpress, SiFirebase, SiCloudinary, SiBootstrap, SiNextdotjs, SiShadcnui } from 'react-icons/si';
+import { SiRedux, SiTailwindcss, SiMongodb, SiExpress, SiFirebase, SiCloudinary, SiBootstrap, SiNextdotjs, SiShadcnui, SiFramer, SiTypescript, SiReactquery } from 'react-icons/si';
 
 const frontendProjects = [
+  {
+    title: 'AI Prompt Studio',
+    description: [
+      'Multi-model AI playground powered by Groq — test 7 LLMs with real-time streaming.',
+      'Side-by-side model comparison with split-view interface for evaluating output quality.',
+      'Auto-saves conversations in browser; export history as Text, Markdown, or PDF.',
+    ],
+    image: '/assets/img/ai-prompt-studio.png',
+    liveLink: 'https://ai-prompt-studio-ai.netlify.app/',
+    githubLink: 'https://github.com/dania-01/AI-Prompt-Studio',
+    techStack: [
+      { logo: <SiNextdotjs size={28} color="#FFFFFF" /> },
+      { logo: <SiTypescript size={28} color="#3178C6" /> },
+      { logo: <SiTailwindcss size={28} color="#38BDF8" /> },
+      { logo: <SiFramer size={28} color="#BB4B96" /> },
+      { logo: <SiReactquery size={28} color="#FF4154" /> },
+    ],
+  },
   {
     title: 'Swiggy Clone',
     description: [

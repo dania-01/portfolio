@@ -1,6 +1,7 @@
 'use client';
 import { Col, Container, Row, Nav, Tab } from 'react-bootstrap';
 import ProjectCard from './ProjectCard';
+import FadeInSection from './FadeInSection';
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact } from 'react-icons/fa';
 import { SiRedux, SiTailwindcss, SiMongodb, SiExpress, SiFirebase, SiCloudinary, SiBootstrap, SiNextdotjs, SiShadcnui, SiFramer, SiTypescript, SiReactquery } from 'react-icons/si';
 
@@ -107,14 +108,17 @@ export default function Projects() {
       <Container>
         <Row>
           <Col>
-            <div className="text-center">
-              <h2 className="projects-heading">My Projects</h2>
-              <p className="projects-subtext">
-                A showcase of my journey — building <span>intuitive</span>, <span>scalable</span>,
-                and <span>visually engaging</span> applications from <b style={{ color: '#f9fafb' }}>Frontend</b> to <b style={{ color: '#f9fafb' }}>Fullstack</b>.
-              </p>
-            </div>
+            <FadeInSection>
+              <div className="text-center">
+                <h2 className="projects-heading">My Projects</h2>
+                <p className="projects-subtext">
+                  A showcase of my journey — building <span>intuitive</span>, <span>scalable</span>,
+                  and <span>visually engaging</span> applications from <b style={{ color: '#f9fafb' }}>Frontend</b> to <b style={{ color: '#f9fafb' }}>Fullstack</b>.
+                </p>
+              </div>
+            </FadeInSection>
 
+            <FadeInSection delay={0.15}>
             <Tab.Container id="projects-tabs" defaultActiveKey="all">
               <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center">
                 <Nav.Item><Nav.Link eventKey="all">All</Nav.Link></Nav.Item>
@@ -127,6 +131,7 @@ export default function Projects() {
                 <Tab.Pane eventKey="fullstack"><Row className="g-4 justify-content-center">{fullstackProjects.map((p, i) => <ProjectCard key={i} {...p} />)}</Row></Tab.Pane>
               </Tab.Content>
             </Tab.Container>
+            </FadeInSection>
           </Col>
         </Row>
       </Container>

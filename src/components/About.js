@@ -1,6 +1,7 @@
 'use client';
 import { Container, Row, Col } from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
+import FadeInSection from './FadeInSection';
 
 const CARDS = [
   {
@@ -28,13 +29,16 @@ export default function About() {
   return (
     <section className="about-section" id="about">
       <Container>
-        <div className="text-center mb-5">
-          <h2 className="section-title">About Me</h2>
-          <p className="section-subtitle">A developer who cares about every pixel and every interaction</p>
-        </div>
+        <FadeInSection>
+          <div className="text-center mb-5">
+            <h2 className="section-title">About Me</h2>
+            <p className="section-subtitle">A developer who cares about every pixel and every interaction</p>
+          </div>
+        </FadeInSection>
 
         <Row className="g-5 align-items-start">
           <Col xs={12} lg={6}>
+            <FadeInSection direction="right" delay={0.1}>
             <p className="about-text">
               Frontend Developer with hands-on experience building scalable{' '}
               <strong>React.js</strong> and <strong>Next.js</strong> applications
@@ -69,17 +73,20 @@ export default function About() {
                 Get In Touch
               </button>
             </div>
+            </FadeInSection>
           </Col>
 
           <Col xs={12} lg={6}>
             <Row className="g-3">
-              {CARDS.map(({ num, title, desc }) => (
+              {CARDS.map(({ num, title, desc }, i) => (
                 <Col key={num} xs={12} sm={6}>
-                  <div className="about-card">
-                    <span className="about-card-num">{num}</span>
-                    <h5 className="about-card-title">{title}</h5>
-                    <p className="about-card-desc">{desc}</p>
-                  </div>
+                  <FadeInSection direction="left" delay={0.1 + i * 0.1}>
+                    <div className="about-card">
+                      <span className="about-card-num">{num}</span>
+                      <h5 className="about-card-title">{title}</h5>
+                      <p className="about-card-desc">{desc}</p>
+                    </div>
+                  </FadeInSection>
                 </Col>
               ))}
             </Row>

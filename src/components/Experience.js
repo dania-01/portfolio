@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { Container } from 'react-bootstrap';
+import FadeInSection from './FadeInSection';
 import { FaBriefcase, FaChevronDown, FaChevronUp, FaExternalLinkAlt } from 'react-icons/fa';
 
 const PROJECTS = [
@@ -36,9 +37,12 @@ export default function Experience() {
   return (
     <section className="experience-section" id="experience">
       <Container>
-        <h2 className="section-title">Experience</h2>
-        <p className="section-subtitle">Where I&apos;ve shipped real products</p>
+        <FadeInSection>
+          <h2 className="section-title">Experience</h2>
+          <p className="section-subtitle">Where I&apos;ve shipped real products</p>
+        </FadeInSection>
 
+        <FadeInSection delay={0.15}>
         <div className="exp-timeline">
           <div className="exp-item">
             <div className="exp-dot"><FaBriefcase size={13} /></div>
@@ -99,6 +103,7 @@ export default function Experience() {
             </div>
           </div>
         </div>
+        </FadeInSection>
       </Container>
     </section>
   );

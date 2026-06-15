@@ -103,6 +103,7 @@ export default function Banner() {
                 </button>
                 <ResumeLink />
               </div>
+
             </div>
           </Col>
 

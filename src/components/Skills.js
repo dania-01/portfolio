@@ -1,5 +1,6 @@
 'use client';
 import { Container, Row, Col } from 'react-bootstrap';
+import FadeInSection from './FadeInSection';
 import { Lightbulb, Users, Clock, MessageSquare } from 'lucide-react';
 import {
   FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaGithub,
@@ -68,8 +69,10 @@ export default function Skills() {
 
       {/* ── Section header ── */}
       <Container>
-        <h2 className="section-title">Skills</h2>
-        <p className="section-subtitle">Technologies I work with every day</p>
+        <FadeInSection>
+          <h2 className="section-title">Skills</h2>
+          <p className="section-subtitle">Technologies I work with every day</p>
+        </FadeInSection>
       </Container>
 
       {/* ── Scrolling marquee ── */}
@@ -90,10 +93,11 @@ export default function Skills() {
 
       {/* ── Technical skills ── */}
       <Container>
-        <p className="skills-group-label">Technical Skills</p>
+        <FadeInSection delay={0.1}><p className="skills-group-label">Technical Skills</p></FadeInSection>
         <Row className="g-4">
-          {CATEGORIES.map(({ num, title, color, gradient, tags }) => (
+          {CATEGORIES.map(({ num, title, color, gradient, tags }, i) => (
             <Col key={num} xs={12} lg={4}>
+              <FadeInSection delay={0.1 + i * 0.1}>
               <div
                 className="skill-cat-card"
                 style={{ background: `linear-gradient(135deg, #161b22 0%, ${gradient} 100%)` }}
@@ -111,12 +115,16 @@ export default function Skills() {
                   ))}
                 </div>
               </div>
+              </FadeInSection>
             </Col>
           ))}
         </Row>
 
         {/* ── Soft Skills ── */}
-        <p className="skills-group-label" style={{ marginTop: '40px' }}>Soft Skills</p>
+        <FadeInSection delay={0.1}>
+          <p className="skills-group-label" style={{ marginTop: '40px' }}>Soft Skills</p>
+        </FadeInSection>
+        <FadeInSection delay={0.2}>
         <div className="soft-skills-pills">
           {SOFT_SKILLS.map(({ label, icon }) => (
             <span key={label} className="soft-skill-pill">
@@ -124,6 +132,7 @@ export default function Skills() {
             </span>
           ))}
         </div>
+        </FadeInSection>
       </Container>
     </section>
   );
